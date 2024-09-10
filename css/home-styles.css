@@ -1,0 +1,409 @@
+/* Contenedor principal del body */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding: 10px 0;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 40%;
+    animation: marquee 30s linear infinite; 
+    font-size: 18px; 
+    color: #000; 
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Nueva sección de portafolio */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.portfolio-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    font-style: initial;
+    color: sandybrown;
+}
+
+.portfolio-header img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    border-radius: 50%;
+}
+
+.portfolio-header img:hover {
+    transform: scale(1.2); /* Escala la tarjeta al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar sobre la tarjeta */
+}
+
+.portfolio-description {
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 0px;
+    color: #000;
+    align-items: center;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; 
+    font-style: italic;
+
+}
+
+.portfolio-description p {
+    font-weight: bold;
+    
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea hacia arriba */
+    gap: 20px; /* Espacio entre los contenedores */
+    padding: 20px;
+}
+
+/* Contenedor de tecnologías con ajuste dinámico */
+.tech-item img {
+    width: 80px; /* Ajusta este valor para el tamaño deseado */
+    height: auto;
+    object-fit: contain; /* Mantiene la proporción de las imágenes */
+    margin-bottom: 10px;
+}
+
+.technologies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    text-align: center;
+    max-width: 150px; /* Control del tamaño máximo de los contenedores */
+    margin: 10px;
+}
+
+
+.tech-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000; /* Asegura que el texto esté en negro */
+}
+
+/* Efecto hover para tecnología */
+.tech-item img:hover {
+    transform: scale(1.3); /* Efecto de zoom al pasar el cursor */
+}
+
+.center-container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-certifications h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes salten a una nueva fila si no hay espacio */
+    justify-content: center; /* Centra las imágenes en el contenedor */
+    gap: 20px; /* Añade espacio entre los elementos */
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 150px; /* Control estricto sobre el tamaño máximo de los logos */
+    margin: 10px; /* Espacio alrededor de cada logo */
+}
+
+.logo-item img {
+    width: 100px; /* Tamaño fijo de las imágenes */
+    height: auto;
+    object-fit: contain; /* Asegura que las imágenes mantengan su proporción sin ser recortadas */
+    border-radius: 5%;
+}
+
+.logo-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor del semestre centrado */
+.semester-container {
+    width: 48%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    color: #000000; /* Asegura que el texto esté en negro */
+    margin-bottom: 20px; /* Añade un espacio debajo */
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+.semester-container p{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.semester-container ol{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/* Estilo para el contenedor principal que divide en dos columnas */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Contenedor izquierdo dividido */
+.left-container {
+    width: 50%; /* Ocupa el 50% del ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantén los elementos alineados al inicio */
+    padding: 20px;
+    background-color: #f0f0f0; /* Fondo claro */
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más grande y marcada */
+    color: #000000;
+    min-width: 200px;
+    max-width: 600px;
+    overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+    overflow-y: auto; /* Permite el scroll vertical */
+    position: relative;
+}
+
+/* Oculta la barra de desplazamiento vertical en navegadores basados en WebKit (Chrome, Safari, Opera) */
+.left-container::-webkit-scrollbar {
+    width: 0px; /* El ancho del scrollbar es 0, ocultándolo */
+}
+
+/* Para Firefox */
+.left-container {
+    scrollbar-width: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Para Internet Explorer y Edge */
+.left-container {
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento */
+}
+
+/* Encabezado fijo para "Current Projects" */
+.left-header {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.left-header p {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Contenedor para las tarjetas de los proyectos */
+.project-list {
+    max-height: 600px; /* Establece un tamaño máximo para que sea desplazable */
+    overflow-y: auto; /* Habilita el desplazamiento vertical solo para las tarjetas */
+    padding-right: 10px; /* Asegura que el scroll no cubra el contenido */
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    background-color: #000000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Alinea el contenido de la tarjeta */
+    align-items: center; /* Alinea verticalmente la imagen */
+    transition: transform 0.3s ease; /* Añade la transición para el efecto de escala */
+}
+
+/* Contenedor para el texto del proyecto */
+.project-text {
+    display: flex;
+    flex-direction: column; /* Coloca el título arriba y el texto abajo */
+    justify-content: center;
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.project-card h3 {
+    margin: 0 0 5px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estilo para la imagen del proyecto */
+.project-card img {
+    width: 50px; /* Tamaño del icono */
+    height: auto;
+    border-radius: 5px; /* Opción para redondear un poco el icono si es necesario */
+}
+
+.project-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto de la tarjeta */
+}
+
+.project-card:hover {
+    transform: scale(1.2); /* Escala la tarjeta al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar sobre la tarjeta */
+}
+
+/* Contenedor derecho con el GIF */
+.right-container {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    min-width: auto;
+    min-height: auto;
+    max-width: 400px;
+    border: 2px solid sandybrown;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.left-container,
+.right-container {
+    width: 50%; /* 50% en pantallas grandes */
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra los contenidos internos */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .technologies, .semester-container {
+        width: 80%; /* Ambos contenedores ocupan el 100% en pantallas pequeñas */
+        margin-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    
+    .center-container {
+    align-items: center;
+    justify-content: center;
+    }
+
+    .center-container img {
+        width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas también */
+        height: auto; /* Mantiene la proporción al ajustar el ancho */
+        max-width: none; /* No limite el ancho máximo en pantallas pequeñas */
+        max-height: 300px; /* Limita la altura máxima si la imagen es demasiado alta */
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center; /* Centra los contenedores en pantallas pequeñas */
+        justify-content: center;
+        padding: 0; /* Asegura que no haya padding adicional */
+    }
+
+    .left-container,
+    .right-container {
+        width: 80%; /* Asegura que ocupen el ancho completo */
+        max-width: 100%;
+        margin-bottom: 10px; /* Reduce el margen inferior entre contenedores */
+        padding: 10px; /* Ajusta el padding para que no se desborde en pantallas pequeñas */
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    }
+
+    .left-container{
+        overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+        overflow-y: auto; /* Permite el scroll vertical */
+        position: relative;
+    }
+
+    /* Oculta la barra de desplazamiento vertical en navegadores basados en WebKit (Chrome, Safari, Opera) */
+    .left-container::-webkit-scrollbar {
+        width: 0px; /* El ancho del scrollbar es 0, ocultándolo */
+    }
+
+    /* Para Firefox */
+    .left-container {
+        scrollbar-width: none; /* Oculta la barra de desplazamiento */
+    }
+
+    /* Para Internet Explorer y Edge */
+    .left-container {
+        -ms-overflow-style: none; /* Oculta la barra de desplazamiento */
+    }
+
+    .right-container{
+        width: 80%;
+    }
+
+    .project-list {
+        padding: 0;
+        margin: 0;
+        width: 80%; /* Asegura que la lista de proyectos no se salga del contenedor */
+    }
+
+    .project-card {
+        margin-bottom: 10px; /* Reduce el espacio entre tarjetas en pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding para evitar desbordamientos */
+    }
+
+}
