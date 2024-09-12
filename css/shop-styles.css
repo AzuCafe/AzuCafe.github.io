@@ -72,7 +72,7 @@ body {
 }
 
 /* Contenedor izquierdo para links */
-.left-container {
+.left-container-shop {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,12 +86,12 @@ body {
     color: #ffffff;
 }
 
-.left-container img {
+.left-container-shop img {
     border-radius: 10px;
 }
 
 /* Contenedor derecho para el GIF */
-.right-container {
+.right-container-shop {
     width: 50%;
     height: 300px;
     background-size: cover;
@@ -105,7 +105,7 @@ body {
     justify-content: center;
 }
 
-.right-container img {
+.right-container-shop img {
     border-radius: 10px;
     width: 100%;
 }
@@ -139,6 +139,56 @@ body {
     filter: invert(100%);
 }
 
+.portfolio-description {
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 0px;
+    color: #000;
+    align-items: center;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; 
+    font-style: italic;
+
+}
+
+.portfolio-description p {
+    font-weight: bold;
+    
+}
+
+/* Contenedor de tecnologías con ajuste dinámico */
+.tech-item img {
+    width: 80px; /* Ajusta este valor para el tamaño deseado */
+    height: auto;
+    object-fit: contain; /* Mantiene la proporción de las imágenes */
+    margin-bottom: 10px;
+}
+
+.technologies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    text-align: center;
+    max-width: 150px; /* Control del tamaño máximo de los contenedores */
+    margin: 10px;
+}
+
+
+.tech-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000; /* Asegura que el texto esté en negro */
+}
+
+/* Efecto hover para tecnología */
+.tech-item img:hover {
+    transform: scale(1.3); /* Efecto de zoom al pasar el cursor */
+}
+
 /* Media Queries: Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
     .home-content {
@@ -150,12 +200,12 @@ body {
     }
 
     /* Ajustes para los contenedores */
-    .left-container {
+    .left-container-shop {
         width: 100%; /* Contenedor de los links ocupa todo el ancho */
         margin-bottom: 20px;
     }
 
-    .right-container {
+    .right-container-shop {
         width: 100%; /* El contenedor del GIF también ocupa todo el ancho */
         height: auto; /* Ajusta dinámicamente la altura del GIF */
         margin-bottom: 20px;
@@ -179,5 +229,25 @@ body {
         margin-bottom: 0px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    .technologies {
+        width: 80%; /* Ambos contenedores ocupan el 100% en pantallas pequeñas */
+        margin-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    
+    .center-container {
+    align-items: center;
+    justify-content: center;
+    }
+
+    .center-container img {
+        width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas también */
+        height: auto; /* Mantiene la proporción al ajustar el ancho */
+        max-width: none; /* No limite el ancho máximo en pantallas pequeñas */
+        max-height: 300px; /* Limita la altura máxima si la imagen es demasiado alta */
     }
 }

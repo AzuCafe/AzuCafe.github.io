@@ -7,21 +7,80 @@ body {
     color: #000;
 }
 
+.portfolio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background-color: #fff;
+    max-width: 1200px;
+    max-height: 750px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 100%;
+    padding-bottom: 110px;
+}
+
+.title-wall {
+    flex: 1;
+    text-align: left;
+}
+
+.title-wall h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6vw;
+    margin: 0;
+    color: #000;
+}
+
+.pic-wall {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pic-wall img {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
 .marquee {
+    position: relative; /* Permite la posición de los pseudo-elementos en relación al contenedor */
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
     background: #ffffff;
     padding: 10px 0;
+    font-size: 18px;
+    color: #000;
 }
 
 .marquee span {
+    font-family: 'Montserrat', sans-serif;
     display: inline-block;
-    padding-left: 40%;
+    padding-left: 105%;
     animation: marquee 30s linear infinite; 
     font-size: 18px; 
     color: #000; 
+}
+
+.marquee::before, .marquee::after {
+    content: ''; /* Crea un pseudo-elemento vacío para las líneas */
+    position: absolute;
+    top: 0;
+    width: 15px; /* Ancho de la línea negra */
+    height: 100%; /* La línea ocupará todo el alto del contenedor */
+    background-color: #000; /* Color negro para las líneas */
+}
+
+.marquee::before {
+    left: 0; /* La línea aparece en el lado izquierdo */
+}
+
+.marquee::after {
+    right: 0; /* La línea aparece en el lado derecho */
 }
 
 @keyframes marquee {
@@ -29,122 +88,154 @@ body {
     100% { transform: translate(-100%, 0); }
 }
 
-/* Nueva sección de portafolio */
-.portfolio-header {
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    padding-top: 20px;
-    padding-bottom: 10px;
-    
-}
-
-.portfolio-header h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    padding-top: 0px;
-    font-style: initial;
-    color: #532E1C;
-}
-
-.portfolio-header img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    padding-top: 0px;
-    border-radius: 50%;
-}
-
-.portfolio-header img:hover {
-    transform: scale(1.2); /* Escala la tarjeta al pasar el cursor */
-    cursor: pointer; /* Cambia el cursor a pointer al pasar sobre la tarjeta */
-}
-
-.portfolio-description {
-    font-size: 1.2em;
-    margin-top: 10px;
-    padding-top: 0px;
-    color: #000;
-    align-items: center;
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px; 
-    font-style: italic;
-
-}
-
-.portfolio-description p {
-    font-weight: bold;
-    
-}
-
 .centered-content {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #925632;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinea hacia arriba */
-    gap: 20px; /* Espacio entre los contenedores */
-    padding: 20px;
-}
-
-/* Contenedor de tecnologías con ajuste dinámico */
-.tech-item img {
-    width: 80px; /* Ajusta este valor para el tamaño deseado */
-    height: auto;
-    object-fit: contain; /* Mantiene la proporción de las imágenes */
-    margin-bottom: 10px;
-}
-
-.technologies {
-    display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column; /* Cambia para alinear los elementos en columna */
+    justify-content: center; /* Alinea los elementos al centro verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 15px;
 }
 
-.tech-item {
+.centered-content h3 {
     text-align: center;
-    max-width: 150px; /* Control del tamaño máximo de los contenedores */
-    margin: 10px;
+    font-weight: bold;
+    font-size: 36px; /* Ajusta el tamaño según tu preferencia */
+    margin-bottom: 20px;
+    color: #925632;
 }
 
-
-.tech-item p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #000; /* Asegura que el texto esté en negro */
-}
-
-/* Efecto hover para tecnología */
-.tech-item img:hover {
-    transform: scale(1.3); /* Efecto de zoom al pasar el cursor */
-}
-
-.center-container {
-    width: 70%;
-    height: auto;
+.wall-awards {
+    width: 100%; /* Hace que el contenedor de la imagen principal ocupe todo el ancho disponible */
+    max-height: 200px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centra la imagen dentro del contenedor */
+    margin-bottom: 20px; /* Añade un espacio debajo de la imagen */
+    
+}
+
+.wall-awards img {
+    max-width: 100%; /* La imagen ocupa todo el ancho disponible */ /* Ajusta la altura máxima para que la imagen no se distorsione */
+    object-fit: cover; /* Corta la imagen en lugar de estirarla */
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.years {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los contenedores se distribuyan en filas */
+    justify-content: center; /* Centra los contenedores horizontalmente */
+    gap: 20px; /* Espacio entre los contenedores */
+    align-items: center; /* Mantiene los elementos alineados en la parte superior pero permite diferentes alturas */
+    
+}
+
+.year {
+    flex: 1 1 300px;
+    max-width: 400px;
     padding: 10px;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color: #fff ;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.year p {
+    font-weight: bold;
+    font-size: 30px; /* Ajusta el tamaño del año */
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.awards {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    background-color: #925632;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.awards ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #925632;
+    border-radius: 15px;
+}
+
+.awards li {
+    background-color: #ffffff; /* Color de fondo del premio */
+    border-radius: 15px;
+    color: #000000;
+    padding: 50px;
+    flex: 1 1 300px; /* Los elementos flexibles ocuparán al menos 300px de ancho */
+    max-width: 500px; /* Limita el ancho máximo de cada premio */
+    margin: 10px; /* Espacio alrededor de cada premio */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    list-style-position: inside; /* Alinea la numeración con el texto */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+.awards ol li {
+    display: flex;
+    justify-content: space-between; /* Alinea el texto y la imagen de la medalla a los lados */
+    align-items: center; /* Alinea el contenido verticalmente */
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: #000000;
+    padding: 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.award-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0; /* Evita bordes redondeados */
+}
+
+.awards ol li .award-image {
+    width: 50px; /* Ajusta el tamaño de la medalla */
+    height: auto;
+    margin-left: 10px; /* Espacio entre el texto y la medalla */
 }
 
 .text-certifications h1 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 20px;
+    color: #925632;
 }
 
 .logos {
+    font-family: 'Playfair Display', serif;
     display: flex;
     flex-wrap: wrap; /* Permite que las imágenes salten a una nueva fila si no hay espacio */
     justify-content: center; /* Centra las imágenes en el contenedor */
     gap: 20px; /* Añade espacio entre los elementos */
+    color: #925632;
 }
 
 .logo-item {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,36 +252,11 @@ body {
 }
 
 .logo-item p {
+    font-family: 'Montserrat', sans-serif;
     margin-top: 5px;
     font-size: 14px;
-    color: #333;
+    color: #000000;
     text-align: center;
-}
-
-/* Contenedor del semestre centrado */
-.semester-container {
-    width: 48%;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    color: #000000; /* Asegura que el texto esté en negro */
-    margin-bottom: 20px; /* Añade un espacio debajo */
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 30px;
-}
-
-.semester-container p{
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.semester-container ol{
-    font-weight: normal;
-    font-size: 18px;
 }
 
 /* Estilo para el contenedor principal que divide en dos columnas */
@@ -210,9 +276,9 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Mantén los elementos alineados al inicio */
     padding: 20px;
-    background-color: #f0f0f0; /* Fondo claro */
+    background-color: #fff; /* Fondo claro */
     border-radius: 10px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más grande y marcada */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
     color: #000000;
     min-width: 200px;
     max-width: 600px;
@@ -242,12 +308,14 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 
 .left-header p {
     font-size: 20px;
     font-weight: normal;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Contenedor para las tarjetas de los proyectos */
@@ -259,15 +327,16 @@ body {
 
 /* Tarjetas de proyectos */
 .project-card {
-    background-color: #000000;
+    background-color: #925632;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-between; /* Alinea el contenido de la tarjeta */
     align-items: center; /* Alinea verticalmente la imagen */
-    transition: transform 0.3s ease; /* Añade la transición para el efecto de escala */
+    transition: transform 0.3s ease;
+    
 }
 
 /* Contenedor para el texto del proyecto */
@@ -276,15 +345,18 @@ body {
     flex-direction: column; /* Coloca el título arriba y el texto abajo */
     justify-content: center;
     margin-right: 20px; /* Espacio entre el texto y la imagen */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .project-card h3 {
     margin: 0 0 5px;
     font-size: 1.5em;
     color: #ffffff;
+    font-family: 'Playfair Display', serif;
 }
 
 .project-card p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     color: #ffffff;
     margin: 0;
@@ -317,8 +389,8 @@ body {
     min-width: auto;
     min-height: auto;
     max-width: 400px;
-    border: 2px solid sandybrown;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid B0C0BC;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
 .left-container,
@@ -334,12 +406,41 @@ body {
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
-    .technologies, .semester-container {
+
+    .portfolio-header {
+    
+        padding: 20px; /* Reduce el padding */
+        padding-bottom: 40px;
+    }
+
+    .title-wall {
+        text-align: center; /* Centra el texto */
+        margin-bottom: 20px; /* Añade espacio entre el título y la imagen */
+    }
+
+    .pic-wall {
+        justify-content: center; /* Centra la imagen */
+    }
+
+    .pic-wall img {
+        width: 80%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    }
+
+    .technologies {
         width: 80%; /* Ambos contenedores ocupan el 100% en pantallas pequeñas */
         margin-bottom: 20px;
         padding-left: 15px;
         padding-right: 15px;
         width: 100%;
+    }
+
+    .awards {
+        flex-direction: column; /* Alinea los premios en una columna en pantallas pequeñas */
+        justify-content: center;
+    }
+
+    .awards li {
+        max-width: 100%; /* En pantallas pequeñas, los premios ocuparán el ancho completo */
     }
     
     .center-container {
@@ -405,5 +506,4 @@ body {
         margin-bottom: 10px; /* Reduce el espacio entre tarjetas en pantallas pequeñas */
         padding: 10px; /* Ajusta el padding para evitar desbordamientos */
     }
-
 }
