@@ -2,8 +2,10 @@ body {
     font-family: 'Times New Roman', serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #fff;
+    background-color: #B0C0BC  ; /* Color opcional fondo */
+    background-color: #dbdad6  ;
+    background-color: #ffffff  ;
+    color: #000000;
 }
 
 .navbar-container {
@@ -13,7 +15,7 @@ body {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 20px auto;
-    color: #000000;
+    color: #0F0F0F;
     font-family: 'Times New Roman', serif;
 }
 
@@ -35,12 +37,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000000; 
+    background-color: #6a6665 ; 
     padding: 10px;
     border-radius: 25px;
-    border: 2px solid #000000; 
+    border: 2px solid #6a6665 ; 
     min-width: 270px;
-    max-width: 370px;
+    max-width: 470px;
     margin: 20px auto;
     flex-shrink: 0;
     flex-grow: 1;
@@ -63,8 +65,8 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px 25px;
-    background-color: #000000;
-    border: 1px solid #000000;
+    background-color: #6a6665 ;
+    border: 1px solid #6a6665 ;
     transition: all 0.3s ease;
     font-size: 15px;
     position: relative;
@@ -72,15 +74,18 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #293854;
-    border: 3px solid #293854;
+    background-color: #A77352   ;
+    border: 10px solid #A77352;
     color: #fff;
+    border-radius: 25px;
 }
 
 nav ul li a.active {
     background-color: #ffffff;
     color: #000000;
     border: 4px solid #ffffff;
+    border-radius: 25px;
+    
 }
 
 .content-section {
