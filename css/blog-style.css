@@ -1,0 +1,80 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Estilos para el contenedor principal del blog */
+.blog-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para resaltar el contenido */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para cada publicación del blog */
+.blog-post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo ligeramente más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición para hover */
+}
+
+/* Estilo para el título de cada publicación */
+.blog-post h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #925632; /* Color marrón acorde a la paleta */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los párrafos de cada publicación */
+.blog-post p {
+    font-size: 18px;
+    color: #555;
+    text-align: justify; /* Texto justificado para mayor legibilidad */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Efecto hover para cada publicación */
+.blog-post:hover {
+    background-color: #fff; /* Fondo blanco al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Separación entre publicaciones */
+.blog-container .blog-post + .blog-post {
+    margin-top: 40px;
+}
+
+/* Estilos para el título principal de la página */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #925632;
+}
+
+/* Ajustes de diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 15px;
+    }
+
+    .blog-post h2 {
+        font-size: 28px; /* Reduce el tamaño del título en pantallas más pequeñas */
+    }
+
+    .blog-post p {
+        font-size: 16px; /* Reduce ligeramente el tamaño del texto */
+    }
+}

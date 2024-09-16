@@ -1,253 +1,117 @@
+/* Estilo global */
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.home-content {
-    background-color: #ffffff;
-    color: #000000;
-    min-height: 63vh;
+/* Contenedor principal de la tienda */
+.shop-container {
     display: flex;
-    justify-content: space-between; /* Alinea los contenedores a los lados */
-    align-items: center;
-    padding: 120px;
-    margin: 0 auto;
-    flex-direction: row; /* Mantiene los contenedores en una fila */
-    overflow-x: hidden;
-    padding-top: 70px;
-}
-
-.text-left-container {
-    width: 50%; /* El mismo ancho que el contenedor izquierdo */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center; 
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding-right: 40px;
-}
-
-
-
-.title {
-    width: 50%; /* Ajusta el ancho para alinearlo con el contenedor izquierdo */
-    text-align: center;
-    margin-bottom: 20px;
-    border: 5px solid #ffffff;
-    border-radius: 5px; /* Bordes redondeados opcionales */
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.7); /* Añade una sombra más marcada */
-}
-
-.link {
-    top: 1px;
-    left: 70px;
-    text-align: center;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.git {
-    top: 25px;
-    left: 20px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.name {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.career {
-    font-size: 25px;
-    font-weight: 300;
-    color: #ffffff;
-    text-align: center;
-}
-
-/* Contenedor izquierdo para links */
-.left-container-shop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #000000;
-    border: 5px solid #ffffff; /* Añade un borde sólido blanco */
-    color: #ffffff;
-}
-
-.left-container-shop img {
-    border-radius: 10px;
-}
-
-/* Contenedor derecho para el GIF */
-.right-container-shop {
-    width: 50%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px; /* Ajusta los bordes redondeados */
-    border: 5px solid #ffffff; /* Añade un borde sólido blanco */
-    max-width: 400px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Añade una sombra más marcada */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-container-shop img {
-    border-radius: 10px;
-    width: 100%;
-}
-
-/* Contenedor de links */
-.links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%; /* Asegura que los links ocupen el ancho completo del contenedor */
-}
-
-.links a {
-    display: flex;
-    flex-direction: row; /* Icono y texto en línea */
-    align-items: center;
-    justify-content: flex-start; /* Alinea los iconos y texto desde la izquierda */
-    text-decoration: none;
-    color: inherit;
-    margin: 10px 0;
-    width: 60%; /* Ajusta el ancho para darle espacio y mantenerlo alineado */
-}
-
-.links img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-
-.git-icon {
-    filter: invert(100%);
-}
-
-.portfolio-description {
-    font-size: 1.2em;
-    margin-top: 10px;
-    padding-top: 0px;
-    color: #000;
-    align-items: center;
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px; 
-    font-style: italic;
-
-}
-
-.portfolio-description p {
-    font-weight: bold;
-    
-}
-
-/* Contenedor de tecnologías con ajuste dinámico */
-.tech-item img {
-    width: 80px; /* Ajusta este valor para el tamaño deseado */
-    height: auto;
-    object-fit: contain; /* Mantiene la proporción de las imágenes */
-    margin-bottom: 10px;
-}
-
-.technologies {
-    display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: #f9f9f9;
 }
 
-.tech-item {
+/* Estilos para cada carta de producto */
+.product-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
-    max-width: 150px; /* Control del tamaño máximo de los contenedores */
-    margin: 10px;
+    transition: transform 0.3s ease;
 }
 
+.product-card:hover {
+    transform: scale(1.05);
+}
 
-.tech-item p {
-    margin-top: 5px;
+.product-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Títulos y textos de productos */
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #925632; /* Color marrón para coincidir con tu paleta */
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Precio */
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Estilos para los botones */
+.view-button, .buy-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    color: #000; /* Asegura que el texto esté en negro */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto hover para tecnología */
-.tech-item img:hover {
-    transform: scale(1.3); /* Efecto de zoom al pasar el cursor */
+/* Botón "Ver Producto" */
+.view-button {
+    background-color: #925632;
+    color: #fff;
 }
 
-/* Media Queries: Adaptación para pantallas pequeñas */
+.view-button:hover {
+    background-color: #7a4726;
+}
+
+/* Botón "Comprar Ahora" */
+.buy-button {
+    background-color: #f16a28;
+    color: #fff;
+}
+
+.buy-button:hover {
+    background-color: #d95a20;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
-    .home-content {
-        flex-direction: column; /* Apila los contenedores en pantallas pequeñas */
-        justify-content: center;
-        padding: 0px; /* Elimina el padding */
-        padding-top: 50px;
-        max-width: 100%; /* Elimina el ancho fijo y usa el 100% */
-    }
-
-    /* Ajustes para los contenedores */
-    .left-container-shop {
-        width: 100%; /* Contenedor de los links ocupa todo el ancho */
-        margin-bottom: 20px;
-    }
-
-    .right-container-shop {
-        width: 100%; /* El contenedor del GIF también ocupa todo el ancho */
-        height: auto; /* Ajusta dinámicamente la altura del GIF */
-        margin-bottom: 20px;
-    }
-
-    .links a {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        justify-content: center; /* Centra el contenido en pantallas pequeñas */
-        text-align: center; /* Centra el texto e iconos */
-        flex-direction: column; /* Coloca el icono arriba del texto en pantallas pequeñas */
-    }
-
-    .text-left-container {
-        width: 90%; /* El mismo ancho que el contenedor izquierdo */
-        display: flex;
+    .shop-container {
         flex-direction: column;
-        align-items: center; /* Centra el contenido horizontalmente */
-        justify-content: center; /* Centra el contenido verticalmente */
-        text-align: center; 
-        box-sizing: border-box;
-        margin-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
+        align-items: center;
+        padding: 20px;
     }
 
-    .technologies {
-        width: 80%; /* Ambos contenedores ocupan el 100% en pantallas pequeñas */
-        margin-bottom: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
-        width: 100%;
-    }
-    
-    .center-container {
-    align-items: center;
-    justify-content: center;
-    }
-
-    .center-container img {
-        width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas también */
-        height: auto; /* Mantiene la proporción al ajustar el ancho */
-        max-width: none; /* No limite el ancho máximo en pantallas pequeñas */
-        max-height: 300px; /* Limita la altura máxima si la imagen es demasiado alta */
+    .product-card {
+        width: 90%; /* Asegura que las cartas ocupen más espacio en pantallas pequeñas */
     }
 }

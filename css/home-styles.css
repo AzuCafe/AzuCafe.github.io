@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000;
 }
 
@@ -131,6 +131,56 @@ body {
     text-align: center;
 }
 
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las cartas se ajusten en filas verticales */
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1 1 200px;  /* El tamaño de la carta es flexible y se adapta */
+    max-width: 300px;
+    height: 100%;  /* Elimina cualquier restricción de altura */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;  /* Elimina cualquier espacio extra generado por inline-block */
+    border-bottom: 2px solid #ffffff;
+}
+
+.card h3 {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+}
+
+.card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
 
@@ -174,48 +224,12 @@ body {
         max-height: 300px; /* Limita la altura máxima si la imagen es demasiado alta */
     }
 
-    .left-container,
-    .right-container {
-        width: 80%; /* Asegura que ocupen el ancho completo */
-        max-width: 100%;
-        margin-bottom: 10px; /* Reduce el margen inferior entre contenedores */
-        padding: 10px; /* Ajusta el padding para que no se desborde en pantallas pequeñas */
-        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    .cards-container {
+        justify-content: center; /* Centra las cartas horizontalmente en pantallas pequeñas */
     }
 
-    .left-container{
-        overflow-x: hidden; /* Asegura que no haya scroll horizontal */
-        overflow-y: auto; /* Permite el scroll vertical */
-        position: relative;
-    }
-
-    /* Oculta la barra de desplazamiento vertical en navegadores basados en WebKit (Chrome, Safari, Opera) */
-    .left-container::-webkit-scrollbar {
-        width: 0px; /* El ancho del scrollbar es 0, ocultándolo */
-    }
-
-    /* Para Firefox */
-    .left-container {
-        scrollbar-width: none; /* Oculta la barra de desplazamiento */
-    }
-
-    /* Para Internet Explorer y Edge */
-    .left-container {
-        -ms-overflow-style: none; /* Oculta la barra de desplazamiento */
-    }
-
-    .right-container{
-        width: 80%;
-    }
-
-    .project-list {
-        padding: 0;
-        margin: 0;
-        width: 80%; /* Asegura que la lista de proyectos no se salga del contenedor */
-    }
-
-    .project-card {
-        margin-bottom: 10px; /* Reduce el espacio entre tarjetas en pantallas pequeñas */
-        padding: 10px; /* Ajusta el padding para evitar desbordamientos */
+    .card {
+        flex: 1 1 100%;  /* Hace que las cartas ocupen el 100% del ancho del contenedor */
+        max-width: 200px; /* Puedes ajustar el tamaño máximo si es necesario */
     }
 }

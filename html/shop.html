@@ -4,79 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="icon" href="img\black_5.png" type="image/x-icon">
+    <link rel="icon" href="img/black_5.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/shop-styles.css">
 </head>
 <body>
-    <div class="home-content">
-
-        <div class="text-left-container">
-        
-            <div class="title"> 
-                <h1 class="link">My Links</h1>
-                <h1 class="git">(GitHub: Santag207)</h1>
-            </div>
-
-        <!-- Contenedor derecho con el GIF -->
-            <div class="left-container-shop">
-                <!-- Información personal -->
-                <div class="name">
-                    <h1 class="name">Santiago Castro Zuluaga</h1>
-                    <h2 class="career">Systems Engineer</h2>
-                </div>
-
-                <!-- Contenedor de links -->
-                <div class="links">
-                    <a href="https://github.com/Santag207" target="_blank">
-                        <img src="../img/iconos/githublogo.png" class="git-icon">
-                        GitHub
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/santiago-castro-zuluaga-9959bb252/" target="_blank">
-                        <img src="../img/iconos/linkedin-logo.png" class="linkedin-icon">
-                        LinkedIn
-                    </a>
-
-                    <a href="mailto:castrosantiago476@gmail.com?subject=Hola%20Santiago&body=Hola%20Santag207,%20me%20gustaría%20ponerme%20en%20contacto%20contigo." target="_blank">
-                        <img src="../img/mail.png" class="mail-icon">
-                        Mail
-                    </a>
-
-                    <a href="https://drive.google.com/file/d/1yr3cURtNy7a390rfu1yrDKhpkf6bhaPK/view?usp=sharing" target="_blank">
-                        <img src="img/docs.png" class="pdf-icon">
-                        PDF CV
-                    </a>
-                </div>
+    <div class="shop-container">
+        <!-- First product card -->
+        <div class="product-card">
+            <img src="../img/shop/grano.png" alt="Coffee beans" class="product-image">
+            <h3>Coffee Beans</h3>
+            <p>Coffee beans in different presentations (125gr, 250gr, 340gr, 500gr)</p>
+            <div class="price">18.000$ - 30.000$</div>
+            <div class="button-container">
+                <button class="view-button">View Product</button>
+                <a href="https://api.whatsapp.com/send?phone=571234567890&text=I%20am%20interested%20in%20buying%20Coffee%20Beans" target="_blank">
+                    <button class="buy-button">Buy Now</button>
+                </a>
             </div>
         </div>
 
-        <!-- Contenedor izquierdo con la información personal y links -->
-        <div class="right-container-shop" style="background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczNqMzh3amF6dnd5Znl5b2d6M2doOHl2dTIyMWcyb3RrNXdnYXB4biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CQl0tM5gYyqQg/giphy.gif');">
+        <!-- Second product card -->
+        <div class="product-card">
+            <img src="../img/shop/molido.png" alt="Ground coffee" class="product-image">
+            <h3>Ground Coffee</h3>
+            <p>Ground coffee in different presentations (125gr, 250gr, 340gr, 500gr)</p>
+            <div class="price">18.000$ - 30.000$</div>
+            <div class="button-container">
+                <button class="view-button">View Product</button>
+                <a href="https://api.whatsapp.com/send?phone=571234567890&text=I%20am%20interested%20in%20buying%20Ground%20Coffee" target="_blank">
+                    <button class="buy-button">Buy Now</button>
+                </a>
+            </div>
+        </div>
 
-            <div class="portfolio-description">
-                <h2>Colombian family business of organic specialty coffee and other products</h2>
-                <p>ㅤ</p>
-                <h3>Our Products:</h3>
-                <div class="centered-content">
-                    <div class="technologies">
-                        <div class="tech-item">
-                            <img src="..\img\shop\grano.png" alt="grano" title="grano">
-                            <p>Coffee beans in different presentations (125gr, 250gr, 340gr and 500gr)</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="..\img\shop\molido.png" alt="molido" title="molido">
-                            <p>Ground coffee in different presentations (125gr, 250gr, 340gr and 500gr)</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="..\img\shop\te.png" alt="Te" title="te">
-                            <p>Fermented coffee shell tea presentations of (100 gr)</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Third product card -->
+        <div class="product-card">
+            <img src="../img/shop/te.png" alt="Fermented coffee shell tea" class="product-image">
+            <h3>Fermented Coffee Shell Tea</h3>
+            <p>Fermented coffee shell tea presentations of (100 gr)</p>
+            <div class="price">15.000$</div>
+            <div class="button-container">
+                <button class="view-button">View Product</button>
+                <a href="https://api.whatsapp.com/send?phone=571234567890&text=I%20am%20interested%20in%20buying%20Fermented%20Coffee%20Shell%20Tea" target="_blank">
+                    <button class="buy-button">Buy Now</button>
+                </a>
             </div>
         </div>
     </div>
 </body>
 </html>
-
-
